@@ -15,9 +15,9 @@ function Content() {
     }, [setPosts])
 
     return (
-        <div className="row d-flex">
+        <div className="d-flex">
             <SideBarLeft></SideBarLeft>
-            <div className="col-4">
+            <div className="col-6">
                 {posts.map(post => <Card key={post.data.name} data={post.data}></Card>)}
             </div>
         </div>

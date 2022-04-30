@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Header() {
     return (
       <nav className='navbar navbar-expand-lg navbar-light bg-light'>
@@ -9,7 +11,9 @@ function Header() {
           </form>
         </div>
         <div className='col-4 d-flex justify-content-between'>
-          <button type='button' className='btn btn-primary'>Hot</button>
+          <Link to="/hot">
+            <button type='button' className='btn btn-primary'>Hot</button>
+          </Link>
           <button type='button' className='btn btn-primary'>New</button>
           <button type='button' className='btn btn-primary'>Top</button>
         </div>
