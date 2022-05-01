@@ -4,24 +4,25 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Content from './content';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
   <React.StrictMode>
-    <App />
-  </React.StrictMode>  
-  </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route path="/" element={<Content api="https://www.reddit.com/.json"/>}></Route>
+          <Route path="/hot" element={<Content api="https://www.reddit.com/hot/.json"/>}></Route>
+          <Route path="/new" element={<Content api="https://www.reddit.com/new/.json"/>}></Route>
+          <Route path="/top" element={<Content api="https://www.reddit.com/top/.json"/>}></Route>
+        </Route> 
+      </Routes>
+    </BrowserRouter>
+  </React.StrictMode>
 
 );
-
-// router App
-  // router Header
-    // router home content
-    // router hot content
-    // router new content
-    // ...
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

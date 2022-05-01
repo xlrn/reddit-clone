@@ -2,17 +2,16 @@ import SideBarLeft from "./sidebarleft";
 import Card from "./card";
 import React, { useState, useEffect } from 'react';
 
-function Content() {
+function Content(props) {
     const [posts, setPosts] = useState([]);
-
     // add response.ok check here somewhere later
     useEffect(() => {
-        fetch('https://www.reddit.com/.json')
+        fetch(props.api)
             .then(response => response.json())
                 .then(responseJson => {
                     setPosts(responseJson.data.children)
                 })
-    }, [setPosts])
+    }, [setPosts, props])
 
     return (
         <div className="d-flex">

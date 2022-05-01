@@ -8,8 +8,12 @@ function Card(data) {
     const [user, setUser] = useState("");
     const [title, setTitle] = useState("");
     const [subreddit, setSubreddit] = useState("");
+    const [show, setShow] = useState(false);
 
     let embed = <div></div>
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     if (isRedditMedia) {
         if (isVideo) {
