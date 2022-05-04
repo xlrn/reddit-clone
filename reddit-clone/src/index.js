@@ -13,10 +13,11 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="/" element={<Content api="https://www.reddit.com/.json"/>}></Route>
-          <Route path="/hot" element={<Content api="https://www.reddit.com/hot/.json"/>}></Route>
-          <Route path="/new" element={<Content api="https://www.reddit.com/new/.json"/>}></Route>
-          <Route path="/top" element={<Content api="https://www.reddit.com/top/.json"/>}></Route>
+          <Route index element={<Content/>}></Route>
+          <Route path="/hot" element={<Content/>}></Route>
+          <Route path="/new" element={<Content/>}></Route>
+          <Route path="/top" element={<Content/>}></Route>
+          <Route path="/r/*" element={<Content/>}></Route>
         </Route> 
       </Routes>
     </BrowserRouter>

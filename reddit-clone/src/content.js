@@ -1,17 +1,20 @@
 import SideBarLeft from "./sidebarleft";
 import Card from "./card";
 import React, { useState, useEffect } from 'react';
+import { useLocation } from "react-router-dom";
 
-function Content(props) {
+function Content() {
     const [posts, setPosts] = useState([]);
     // add response.ok check here somewhere later
+    const location = useLocation();
+
     useEffect(() => {
-        fetch(props.api)
+        fetch("https://www.reddit.com" + location.pathname + ".json")
             .then(response => response.json())
                 .then(responseJson => {
                     setPosts(responseJson.data.children)
                 })
-    }, [setPosts, props])
+    }, [setPosts, location])
 
     return (
         <div className="d-flex">

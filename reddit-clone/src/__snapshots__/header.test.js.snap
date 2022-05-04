@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders properly 1`] = `
+<nav
+  className="navbar navbar-expand-lg navbar-light bg-light"
+>
+  <div
+    className="col-4 d-flex"
+  >
+    <a
+      className="navbar-brand mx-2"
+      href="/"
+    >
+      Reddit
+    </a>
+    <form
+      className="d-flex"
+    >
+      <input
+        aria-label="Search"
+        className="form-control"
+        placeholder="Search"
+        type="search"
+      />
+      <button
+        className="btn btn-outline-success"
+        type="submit"
+      >
+        Search
+      </button>
+    </form>
+  </div>
+  <div
+    className="col-4 d-flex justify-content-between"
+  >
+    <a
+      href="/hot"
+      onClick={[Function]}
+    >
+      <button
+        className="btn btn-primary"
+        type="button"
+      >
+        Hot
+      </button>
+    </a>
+    <a
+      href="/new"
+      onClick={[Function]}
+    >
+      <button
+        className="btn btn-primary"
+        type="button"
+      >
+        New
+      </button>
+    </a>
+    <a
+      href="/top"
+      onClick={[Function]}
+    >
+      <button
+        className="btn btn-primary"
+        type="button"
+      >
+        Top
+      </button>
+    </a>
+  </div>
+</nav>
+`;

@@ -12,7 +12,9 @@ function Header() {
         </div>
         <div className='col-4 d-flex justify-content-between'>
           <Link to="/hot">
-            <button type='button' className='btn btn-primary'>Hot</button>
+            <button type='button' className='btn btn-primary'>
+                Hot
+            </button>
           </Link>
           <Link to="/new">
             <button type='button' className='btn btn-primary'>New</button>
