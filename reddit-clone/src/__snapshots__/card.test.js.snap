@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders properly 1`] = `
+<div
+  className="border py-3 my-3 content-card"
+>
+  <div
+    className="text-start fw-lighter"
+  >
+    <a
+      className="mx-2"
+      href="/r/ffxivdiscussion"
+      onClick={[Function]}
+    >
+      <span
+        id="subredditicon"
+      />
+      <span
+        id="subredditname"
+      >
+         
+        r/ffxivdiscussion
+         
+      </span>
+    </a>
+    •
+    <span
+      className="mx-2"
+      id="postedbyuser"
+    >
+      Posted By 
+      <a
+        href="https://reddit.com/user/Gun_Broken_Help"
+      >
+        u/
+        Gun_Broken_Help
+      </a>
+    </span>
+  </div>
+  <div
+    onClick={[Function]}
+  >
+    <div
+      className="fs-3 lh-1 mx-2 my-2 text-start"
+    >
+      How important are BIS melds?
+    </div>
+    <div
+      className="fs-6 lh-1 mx-2 text-start"
+    >
+      <span>
+        I've done half of this tier on WAR and i really liked it, but i recently got GNB to 90 and fell in love with it. I don't really want to abandon WAR and ideally i'd like to swap between the two. I know WAR is a pain in the ass to use with other tanks since it doesn't use DH melds. So if i were to leave out DH materia for my gunbreaker melds, how serious would the damage loss be?
+
+Important note: I dont really plan on doing optimisation runs, mostly interested in current and future prog. (If im doing week one prog I'd choose one tank and BIS meld) But I also dont want to get rejected from statics because of the damage loss on my gunbreaker.
+
+Am i doomed to grind out a second gearset for my gunbreaker? Or waste a bunch of materia?
+      </span>
+    </div>
+    <div />
+  </div>
+</div>
+`;

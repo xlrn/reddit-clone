@@ -69,7 +69,7 @@ function Card(data) {
                     Posted By <a href={'https://reddit.com/user/'+user}>u/{user}</a>
                 </span>
             </div>
-            <div onClick={handleShow}>
+            <div className="cardbody" onClick={handleShow}>
                 <div className='fs-3 lh-1 mx-2 my-2 text-start'>
                     {title}
                 </div>
