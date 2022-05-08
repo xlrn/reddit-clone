@@ -2,6 +2,12 @@ import React, { useState, useEffect } from 'react';
 import PostModal from './postModal';
 import ReactPlayer from 'react-player/lazy';
 import { Link } from 'react-router-dom';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import ModeCommentIcon from '@mui/icons-material/ModeComment';
+import RedeemIcon from '@mui/icons-material/Redeem';
+import ShareIcon from '@mui/icons-material/Share';
+import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
 
 function Card(data) {
     const [isRedditMedia, setIsRedditMedia] = useState(false);
@@ -12,6 +18,8 @@ function Card(data) {
     const [subreddit, setSubreddit] = useState("");
     const [show, setShow] = useState(false);
     const [selfText, setSelfText] = useState("");
+    const [score, setScore] = useState(0);
+    const [comments, setComments] = useState(0);
 
     let embed = <div></div>
 
@@ -40,6 +48,8 @@ function Card(data) {
         setIsVideo(data.data.is_video);
         setUser(data.data.author);
         setSelfText(data.data.selftext);
+        setScore(data.data.score > 1000 ? Math.round((data.data.score/1000) * 10) / 10 + 'k' : data.data.score);
+        setComments(data.data.num_comments);
         if (data.data.is_video) {
             setMediaUrl(data.data.secure_media.reddit_video.hls_url);
         }
@@ -56,9 +66,9 @@ function Card(data) {
         selfText: selfText,
         isRedditMedia: isRedditMedia,
     }
-
+    
     return (
-        <div className="border py-3 my-3 content-card">
+        <div className="border rounded pt-3 pb-1 mt-3 content-card">
             <div className='text-start fw-lighter'>
                 <Link to={"/"+subreddit} className="mx-2">
                     <span id="subredditicon"></span>
@@ -84,10 +94,29 @@ function Card(data) {
                     }
                 </div>
             </div>
-            {/* <div className='d-flex'>
-                <button type='button' className='btn btn-primary mx-4'>up</button>
-                <button type='button' className='btn btn-primary mx-4'>down</button>
-            </div> */}
+            <div className='d-flex border-top justify-content-between'>
+                <div className='mt-1 ms-4 me-1 text-muted'>
+                    <ArrowUpwardIcon></ArrowUpwardIcon>
+                    {score}
+                    <ArrowDownwardIcon></ArrowDownwardIcon>
+                </div>
+                <div className='mt-1 mx-1 text-muted'>
+                    <ModeCommentIcon className='me-1'></ModeCommentIcon>
+                    {comments}
+                </div>
+                <div className='mt-1 mx-1 text-muted'>
+                    <RedeemIcon className='me-1'></RedeemIcon>
+                    Give Award
+                </div>
+                <div className='mt-1 mx-1 text-muted'>
+                    <ShareIcon className='me-1'></ShareIcon>
+                    Share
+                </div>
+                <div className='mt-1 ms-1 me-4 text-muted'>
+                    <BookmarkAddIcon className='me-1'></BookmarkAddIcon>
+                    Add
+                </div>
+            </div>
             <PostModal show={show} handleClose={handleClose} data={packagedData}></PostModal>
         </div>
     )
