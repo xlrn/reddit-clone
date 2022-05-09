@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function PostModal (props) {
     return(
         <>
-            <Modal show={props.show} onHide={props.handleClose} size="lg">
+            <Modal className="postModal" show={props.show} onHide={props.handleClose} size="lg">
                 <Modal.Header closeButton>
                     <div>
                         <div className='text-start fw-lighter'>

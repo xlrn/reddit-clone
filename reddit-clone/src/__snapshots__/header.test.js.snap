@@ -8,64 +8,151 @@ exports[`renders properly 1`] = `
     className="col-4 d-flex"
   >
     <a
-      className="navbar-brand mx-2"
+      className="navbar-brand mx-5"
       href="/"
     >
-      Reddit
+      <img
+        alt=""
+        height="32px"
+        src="../icons/reddit-logo-2436.png"
+        width="32px"
+      />
     </a>
     <form
-      className="d-flex"
+      className="d-flex ms-4"
     >
-      <input
-        aria-label="Search"
-        className="form-control"
-        placeholder="Search"
-        type="search"
-      />
-      <button
-        className="btn btn-outline-success"
-        type="submit"
+      <div
+        className="input-group"
       >
-        Search
-      </button>
+        <span
+          className="input-group-text"
+        >
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": ".css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}",
+              }
+            }
+            data-emotion="css i4bv87-MuiSvgIcon-root"
+          />
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="SearchIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+            />
+          </svg>
+        </span>
+        <input
+          className="form-control py-2 pr-5 mr-1 bg-transparent"
+          id="example-search-input1"
+          placeholder="Search Reddit"
+          type="search"
+        />
+      </div>
     </form>
   </div>
   <div
-    className="col-4 d-flex justify-content-between"
+    className="col-4"
   >
-    <a
-      href="/hot"
-      onClick={[Function]}
+    <ul
+      className="navbar-nav me-auto mb-2 mb-lg-0 justify-content-between"
     >
-      <button
-        className="btn btn-primary"
-        type="button"
+      <li
+        className="nav-item"
       >
-        Hot
-      </button>
-    </a>
-    <a
-      href="/new"
-      onClick={[Function]}
-    >
-      <button
-        className="btn btn-primary"
-        type="button"
+        <a
+          className="nav-link"
+          href="/hot"
+          onClick={[Function]}
+        >
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": ".css-ptiqhd-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.25rem;}",
+              }
+            }
+            data-emotion="css ptiqhd-MuiSvgIcon-root"
+          />
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+            data-testid="LocalFireDepartmentIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19.48 12.35c-1.57-4.08-7.16-4.3-5.81-10.23.1-.44-.37-.78-.75-.55C9.29 3.71 6.68 8 8.87 13.62c.18.46-.36.89-.75.59-1.81-1.37-2-3.34-1.84-4.75.06-.52-.62-.77-.91-.34C4.69 10.16 4 11.84 4 14.37c.38 5.6 5.11 7.32 6.81 7.54 2.43.31 5.06-.14 6.95-1.87 2.08-1.93 2.84-5.01 1.72-7.69zm-9.28 5.03c1.44-.35 2.18-1.39 2.38-2.31.33-1.43-.96-2.83-.09-5.09.33 1.87 3.27 3.04 3.27 5.08.08 2.53-2.66 4.7-5.56 2.32z"
+            />
+          </svg>
+          Hot
+        </a>
+      </li>
+      <li
+        className="nav-item"
       >
-        New
-      </button>
-    </a>
-    <a
-      href="/top"
-      onClick={[Function]}
-    >
-      <button
-        className="btn btn-primary"
-        type="button"
+        <a
+          className="nav-link"
+          href="/new"
+          onClick={[Function]}
+        >
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": ".css-ptiqhd-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.25rem;}",
+              }
+            }
+            data-emotion="css ptiqhd-MuiSvgIcon-root"
+          />
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+            data-testid="NewReleasesIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68L23 12zm-10 5h-2v-2h2v2zm0-4h-2V7h2v6z"
+            />
+          </svg>
+          New
+        </a>
+      </li>
+      <li
+        className="nav-item"
       >
-        Top
-      </button>
-    </a>
+        <a
+          className="nav-link"
+          href="/top"
+          onClick={[Function]}
+        >
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": ".css-ptiqhd-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.25rem;}",
+              }
+            }
+            data-emotion="css ptiqhd-MuiSvgIcon-root"
+          />
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+            data-testid="TrendingUpIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m16 6 2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"
+            />
+          </svg>
+          Top
+        </a>
+      </li>
+    </ul>
   </div>
 </nav>
 `;
